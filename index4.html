@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container mt-4">
+                <h1 class="text-center">GESTION DES TACHES</h1>
+                <div class="text-center">
+                    <button type="button" class="btn btn-lg btn-secondary text-white" id="btn-ajout">Ajouter une nouvelle page</button>
+                </div>
+                <!-- Formulaire ajout tache -->
+                <div class="row">
+                         <div class="col-md-6" id="form-ajout" hidden> 
+                           <div class="card">
+                               <div class="card-header bg-secondary text-white text-center">Nouvelle Tache </div>
+                                <div class="card-body">
+
+                                    <form >
+                                        <div class="form-group">
+                                            <label for=""> Nom </label>
+                                            <input type="text" class="form-control" id="nom">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for=""> Description</label>
+                                            <textarea name="Description" id="Description" class="form-control"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Priorite</label>
+                                            <select name="priorite" id="priorite" class="form-control">
+                                                <option value="haute">Haute</option>
+                                                <option value="moyenne">Moyenne</option>
+                                                <option value="basse">Basse</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="statut">STATUT</label>
+                                            <select name="statut" id="statut" class="form-control">
+                                                <option value="A FAIRE">A FAIRE</option>
+                                                <option value="en cours">EN COURS</option>
+                                                <option value="terminer">TERMINEE</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="date_limite"> DATE LIMITE</label>
+                                            <input type="date" class="form-control" id="date_limite" name="date_limite">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for=""> RESPONSABLE</label>
+                                            <input type="text" class="form-control" id="responsable" >
+                                        </div>
+                                        <div class="text-center">
+                                            <button id="btn-enreg" type="button" class="btn btn-secondary text-white">ENREGISTRER</button>
+                                            <button id="btn-fermer" type="button" class="btn btn-danger text-white">FERMER</button>
+                                        </div>
+                                    </form>
+                                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-center mt-4">Tableau De Bord</h5>
+                            <div class="row text-center">
+                                <div class="col md-4 bg-dark text-white p-3">
+                                     <p>Taches à Faire</p>
+                                     <h2 id="afaire">0</h2>
+                                </div>
+                                 <div class="col-md-4 bg-dark text-danger p-3">
+                                     <p>Taches en Retard </p>
+                                     <h2 id="enretard">0</h2>
+                                </div>
+                                 <div class="col md-4 bg-dark text-white p-3">
+                                     <p>Taches en Cours</p>
+                                     <h2 id="cours">0</h2>
+                                </div>
+                                 <div class="col md-4 bg-success text-white p-3">
+                                     <p>Taches Terminées</p>
+                                     <h2 id="termine">0</h2>
+                                </div>
+                            </div>
+                                <h5 class="text-center mt-4 bg-dark text-white">Liste des tâches par priorité</h5>
+                                <select id="prioriti" class="form-control">
+                                    <option value=""> <--LA LISTE DES TACHES --> </option>
+                                    <option value="haute">Haute</option>
+                                    <option value="moyenne">Moyenne</option>
+                                    <option value="basse">Basse</option>
+                                </select>
+                                <div id="filtre" class="border p-3"></div>
+                        </div>       
+                    </div>    
+                <div class="row mt-2" id="list-tache">
+                
+
+
+                </div>
+   </div>       
+    
+
+   <script src="script.js"></script>
+</body>
+</html>  
